@@ -1,55 +1,131 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: #d91e1e;
-  color: white;
+/* Reset and base */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: linear-gradient(145deg, #121212, #1e1e1e);
+  color: #fff;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-h1 {
-  margin-bottom: 20px;
+/* Container */
+.container {
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  padding: 20px;
+  background: #1f1f1f;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
-.controls {
-  display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+/* Header */
+header h1 {
+  font-size: 26px;
+  color: #00bfff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #00bfff;
 }
 
-button {
-  font-size: 20px;
+/* Connect button */
+#connectBtn {
+  margin-bottom: 30px;
+  background: #00bfff;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
   font-weight: bold;
-  background: white;
-  color: #e8491d;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+}
+
+#connectBtn:hover {
+  background: #009fd6;
+  transform: scale(1.05);
+}
+
+/* Remote layout */
+.remote {
+  display: grid;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Direction buttons (arrow keys) */
+.control-btn {
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  color: #00bfff;
   border: none;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
-  transition: 0.2s;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.6), inset 0 -3px rgba(255,255,255,0.1);
+  transition: all 0.2s;
   user-select: none;
 }
 
-button:active {
-  background: #ffcc00;
+.control-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 14px rgba(0,0,0,0.6), inset 0 -3px rgba(255,255,255,0.2);
+}
+
+.control-btn:active {
+  transform: translateY(2px) scale(0.95);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.5) inset;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+}
+
+/* Stop button (center emergency) */
+.stop-btn {
+  background: linear-gradient(145deg, #ff4d4d, #cc0000);
+  color: #fff;
+  width: 90px;    /* same width & height as arrow buttons */
+  height: 90px;
+  font-size: 24px;
+  border-radius: 50%; /* make it round */
+  box-shadow: 0 8px 14px rgba(0,0,0,0.7), inset 0 -3px rgba(255,255,255,0.15);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.stop-btn:hover {
+  background: linear-gradient(145deg, #ff1a1a, #990000);
+  transform: scale(1.05);
+}
+
+.stop-btn:active {
+  background: linear-gradient(145deg, #cc0000, #800000);
   transform: scale(0.95);
 }
 
-#connectBtn {
-  margin-bottom: 20px;
-  background: #333;
-  color: white;
-  border-radius: 8px;
-  width: auto;
-  height: auto;
-  padding: 10px 20px;
+/* Mobile responsive */
+@media screen and (max-width: 500px) {
+  .control-btn, .stop-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+  }
+
+  #connectBtn {
+    width: 100%;
+    font-size: 16px;
+  }
 }

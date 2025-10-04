@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>BT_RC_Car</title>
-    <link rel="stylesheet" href="./style.css">
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Micro:bit RC Car Controller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Micro:bit RC Car Controller</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>YuviPep Micro:bit RC Car</h1>
-  <button id="connectBtn">Connect Micro:bit</button>
+  <div class="container">
+    <header>
+      <h1>YuviPep Enterprise RC Car</h1>
+      <button id="connectBtn">Connect Micro:bit</button>
+    </header>
 
-  <div class="controls">
-    <div></div>
-    <button id="up">⬆️</button>
-    <div></div>
-
-    <button id="left">⬅️</button>
-    <button id="stop">⏹️</button>
-    <button id="right">➡️</button>
-
-    <div></div>
-    <button id="down">⬇️</button>
-    <div></div>
+    <div class="remote">
+      <div class="row">
+        <div></div>
+        <button id="up" class="control-btn">⬆️</button>
+        <div></div>
+      </div>
+      <div class="row">
+        <button id="left" class="control-btn">⬅️</button>
+        <button id="stop" class="stop-btn">⏹️</button>
+        <button id="right" class="control-btn">➡️</button>
+      </div>
+      <div class="row">
+        <div></div>
+        <button id="down" class="control-btn">⬇️</button>
+        <div></div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
 </body>
-</html>
-    <script  src="./script.js"></script>
 
-  </body>
-  
 </html>
